@@ -405,6 +405,7 @@ TWindow::SetBounds(
 	SetWindowBounds( GetWindowRef(), kWindowStructureRgn, &inBounds );
 }
 
+#if !__LP64__
 // -----------------------------------------------------------------------------
 //	InvalidateArea
 // -----------------------------------------------------------------------------
@@ -448,6 +449,7 @@ TWindow::ValidateArea(
 {
 	ValidWindowRect( GetWindowRef(), &inRect );
 }
+#endif // !__LP64__
 
 // -----------------------------------------------------------------------------
 //	UpdateCommandStatus
@@ -543,7 +545,7 @@ TWindow::HandleEvent(
 					break;
 
 				case kEventWindowBoundsChanged:
-					if ( inEvent.GetParameter( kEventParamAttributes, &attributes ) )
+					if ( inEvent.GetParameter( kEventParamAttributes, &attributes ) == noErr )
 					{
 						if ( attributes & kWindowBoundsChangeSizeChanged )
 						{

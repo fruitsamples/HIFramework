@@ -1,7 +1,7 @@
 /*
 	File:		TEventHandler.h
 
-    Version:	Mac OS X
+    Version:	1.1
 
 	Disclaimer:	IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc.
 				("Apple") in consideration of your agreement to the following terms, and your
@@ -38,7 +38,7 @@
 				(INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
 				ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-	Copyright © 2000-2004 Apple Computer, Inc., All Rights Reserved
+	Copyright © 2000-2005 Apple Computer, Inc., All Rights Reserved
 */
 
 #ifndef TEventHandler_H_

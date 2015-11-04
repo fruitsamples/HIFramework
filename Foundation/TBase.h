@@ -17,6 +17,8 @@ public:
 	virtual CFIndex		GetRetainCount() const = PURE_VIRTUAL;
 	virtual void		Release() = PURE_VIRTUAL;
 	virtual void		Retain() = PURE_VIRTUAL;
+	
+	virtual ~TBase() {};
 };
 
 #endif // TBase_H_

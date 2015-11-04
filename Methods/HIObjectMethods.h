@@ -44,7 +44,7 @@ struct OpaqueHIObjectRef
 //	CopyClassID
 // -----------------------------------------------------------------------------
 //
-CFStringRef
+inline CFStringRef
 OpaqueHIObjectRef::CopyClassID()
 {
 	return ::HIObjectCopyClassID( GetHIObjectRef() );
@@ -54,7 +54,7 @@ OpaqueHIObjectRef::CopyClassID()
 //	CopyCustomArchiveData
 // -----------------------------------------------------------------------------
 //
-OSStatus
+inline OSStatus
 OpaqueHIObjectRef::CopyCustomArchiveData(
 	CFDictionaryRef*	outCustomData )
 {
@@ -65,7 +65,7 @@ OpaqueHIObjectRef::CopyCustomArchiveData(
 //	DynamicCast
 // -----------------------------------------------------------------------------
 //
-void*
+inline void*
 OpaqueHIObjectRef::DynamicCast(
 	CFStringRef			inClassID )
 {
@@ -76,7 +76,7 @@ OpaqueHIObjectRef::DynamicCast(
 //	IsAccessibilityIgnored
 // -----------------------------------------------------------------------------
 //
-Boolean
+inline Boolean
 OpaqueHIObjectRef::IsAccessibilityIgnored()
 {
 	return ::HIObjectIsAccessibilityIgnored( GetHIObjectRef() );
@@ -86,7 +86,7 @@ OpaqueHIObjectRef::IsAccessibilityIgnored()
 //	IsArchivingIgnored
 // -----------------------------------------------------------------------------
 //
-Boolean
+inline Boolean
 OpaqueHIObjectRef::IsArchivingIgnored()
 {
 	return ::HIObjectIsArchivingIgnored( GetHIObjectRef() );
@@ -96,7 +96,7 @@ OpaqueHIObjectRef::IsArchivingIgnored()
 //	IsOfClass
 // -----------------------------------------------------------------------------
 //
-Boolean
+inline Boolean
 OpaqueHIObjectRef::IsOfClass(
 	CFStringRef			inObjectClassID )
 {
@@ -107,7 +107,7 @@ OpaqueHIObjectRef::IsOfClass(
 //	GetEventTarget
 // -----------------------------------------------------------------------------
 //
-EventTargetRef
+inline EventTargetRef
 OpaqueHIObjectRef::GetEventTarget()
 {
 	return ::HIObjectGetEventTarget( GetHIObjectRef() );
@@ -117,7 +117,7 @@ OpaqueHIObjectRef::GetEventTarget()
 //	PrintDebugInfo
 // -----------------------------------------------------------------------------
 //
-void
+inline void
 OpaqueHIObjectRef::PrintDebugInfo()
 {
 	::HIObjectPrintDebugInfo( GetHIObjectRef() );
@@ -127,7 +127,7 @@ OpaqueHIObjectRef::PrintDebugInfo()
 //	OverrideAccessibilityContainment
 // -----------------------------------------------------------------------------
 //
-void
+inline void
 OpaqueHIObjectRef::OverrideAccessibilityContainment(
 	AXUIElementRef		inDesiredParent,
 	AXUIElementRef		inDesiredWindow,
@@ -140,7 +140,7 @@ OpaqueHIObjectRef::OverrideAccessibilityContainment(
 //	SetAccessibilityIgnored
 // -----------------------------------------------------------------------------
 //
-OSStatus
+inline OSStatus
 OpaqueHIObjectRef::SetAccessibilityIgnored(
 	Boolean				inSetIgnored )
 {
@@ -151,7 +151,7 @@ OpaqueHIObjectRef::SetAccessibilityIgnored(
 //	SetArchivingIgnored
 // -----------------------------------------------------------------------------
 //
-OSStatus
+inline OSStatus
 OpaqueHIObjectRef::SetArchivingIgnored(
 	Boolean				inSetIgnored )
 {
@@ -162,7 +162,7 @@ OpaqueHIObjectRef::SetArchivingIgnored(
 //	SetAuxiliaryAccessibilityAttribute
 // -----------------------------------------------------------------------------
 //
-OSStatus
+inline OSStatus
 OpaqueHIObjectRef::SetAuxiliaryAccessibilityAttribute(
 	UInt64				inIdentifier,
 	CFStringRef			inAttributeName,
@@ -175,7 +175,7 @@ OpaqueHIObjectRef::SetAuxiliaryAccessibilityAttribute(
 //	SetCustomArchiveData
 // -----------------------------------------------------------------------------
 //
-OSStatus
+inline OSStatus
 OpaqueHIObjectRef::SetCustomArchiveData(
 	CFDictionaryRef			inCustomData )
 {

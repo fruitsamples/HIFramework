@@ -92,6 +92,7 @@ public:
 	void				SetBounds(
 							const Rect&				inBounds );
 
+#if !__LP64__
 	void				InvalidateArea(
 							RgnHandle				inRegion );
 	void				InvalidateArea(
@@ -100,7 +101,8 @@ public:
 							RgnHandle				inRegion );
 	void				ValidateArea(
 							const Rect&				inRect );
-
+#endif // !__LP64__
+	
 	void				SetDefaultButton(
 							HIViewRef				inView );
 	void				SetCancelButton(
